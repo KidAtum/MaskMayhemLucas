@@ -8,7 +8,9 @@ public class playerAttack : MonoBehaviour
     public GameObject Hand;
     public weapon myWeapon;
 
-    Animator animator; 
+    Animator animator;
+    //public PlayerMovement first; 
+  
 
     // Start is called before the first frame update
     void Start()
@@ -28,7 +30,28 @@ public class playerAttack : MonoBehaviour
             DoAttack();
             animator.SetTrigger("attackHappens");
             //animator.ResetTrigger("attackHappens");
+            
         }
+
+        if(Input.GetKey(KeyCode.W))
+        {
+            animator.SetBool("isMoving", true);
+        } else if (Input.GetKey(KeyCode.A))
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetBool("isMoving", true);
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            animator.SetBool("isMoving", true);
+        } else
+        {
+            animator.SetBool("isMoving", false);
+        }
+
     }
 
     private void DoAttack()
