@@ -133,6 +133,8 @@ GameObject:
   - component: {fileID: 152084588}
   - component: {fileID: 152084587}
   - component: {fileID: 152084586}
+  - component: {fileID: 152084589}
+  - component: {fileID: 152084590}
   m_Layer: 0
   m_Name: hand
   m_TagString: Untagged
@@ -214,6 +216,39 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152084584}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &152084589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152084584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64a671d08f4fc4bd69fbc866e4e29cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackDmg: 15
+  attackRange: 3
+--- !u!95 &152084590
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152084584}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3d4553ccd5ea742d796789cb61cfb6ff, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &659393781
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +354,7 @@ GameObject:
   - component: {fileID: 976925276}
   - component: {fileID: 976925278}
   - component: {fileID: 976925277}
+  - component: {fileID: 976925279}
   m_Layer: 0
   m_Name: First Person Player
   m_TagString: Untagged
@@ -382,6 +418,21 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 256
+--- !u!114 &976925279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976925275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dae79668bdf74e40a9024765b7d41b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cam: {fileID: 2057639855}
+  Hand: {fileID: 152084584}
+  myWeapon: {fileID: 152084589}
 --- !u!1 &1793257605
 GameObject:
   m_ObjectHideFlags: 0
