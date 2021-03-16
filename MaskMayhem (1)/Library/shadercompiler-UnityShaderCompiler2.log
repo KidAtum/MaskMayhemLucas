@@ -1,5 +1,8 @@
 Base path: '/Applications/Unity/Hub/Editor/2019.4.20f1/Unity.app/Contents', plugins path '/Applications/Unity/Hub/Editor/2019.4.20f1/PlaybackEngines'
 Cmd: initializeCompiler
+<<<<<<< HEAD
 Unhandled exception: Read from shader compiler process failed: error -2147483644, 0/4 bytes read
+=======
+>>>>>>> 6cfa5a9b9a94895d64357da4255065f8876e33d6
 
 Quitting shader compiler process
