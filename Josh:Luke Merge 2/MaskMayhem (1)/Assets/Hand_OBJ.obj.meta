@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: f8b11d2c5e5c44f99845db920a94495d
+guid: 32f65bbffa807424f95c9e55eecb3d09
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Nails
+    second: {fileID: 2100000, guid: eec1d78d955524b6f883a593bbaca0a1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: 2900423ddd9ef450dbaf8d2c40fc90ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat
+    second: {fileID: 2100000, guid: 74d1d453aedfe4dd095c552407f010aa, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
