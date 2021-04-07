@@ -11,7 +11,9 @@ public class ComplianceMeter : MonoBehaviour
         if (complianceMtr <= 0)
         {
             print("Mr. Diaz is now obeying.");
+        } else if (complianceMtr > 0)
+        {
+            print("Enemy is not complying.");
         }
-        print("Mr. Diaz took damage.");
     }
 }

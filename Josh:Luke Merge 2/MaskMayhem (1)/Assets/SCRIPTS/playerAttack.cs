@@ -61,10 +61,12 @@ public class playerAttack : MonoBehaviour
 
         if (Physics.Raycast(ray, out hit, myWeapon.attackRange))
         {
-            if (hit.collider.tag == "Enemy")
+            if (hit.collider.tag == "enemy")
             {
                 ComplianceMeter measureMtr = hit.collider.GetComponent<ComplianceMeter>();
                 measureMtr.takeDmg(myWeapon.attackDmg);
+                //if enemy health > damage on next hit no momvement else ridgidbody physics 
+             
             }
         }
     }
