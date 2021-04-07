@@ -8,7 +8,7 @@ public class playerAttack : MonoBehaviour
     public GameObject Hand;
     public weapon myWeapon;
 
-    Animator animator;
+    public Animator animator;
     //public PlayerMovement first; 
   
 
@@ -16,7 +16,6 @@ public class playerAttack : MonoBehaviour
     void Start()
     {
         //create the weapon - default to hand
-        //can expand this to include ruler? maybe a chair? idek im tired
         myWeapon = Hand.GetComponentInChildren<weapon>();
         animator = GetComponentInChildren<Animator>(); 
 
