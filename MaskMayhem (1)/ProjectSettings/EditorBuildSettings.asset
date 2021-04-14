@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Start Screen/StartScreen copy.unity
+    guid: e87c6dd73a2234c76afee31f9c3cf98a
+  - enabled: 0
+    path: Assets/Scenes/green test scene.unity
+    guid: 099519de11d33445a954e0874181f6ae
+  - enabled: 1
+    path: Assets/Scenes/Science 2nd Flr.unity
+    guid: a8f3485c256885c44bd31817a3df95ae
   m_configObjects: {}
