@@ -25,7 +25,7 @@ void Update()
         slider.value = VacCalc();
         if (complianceMtr <= 0)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 
