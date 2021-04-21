@@ -9,7 +9,9 @@ public class playerAttack : MonoBehaviour
     public weapon myWeapon;
 
     public Animator animator;
-    //public PlayerMovement first; 
+    //public PlayerMovement first;
+
+    private float attackTimer; 
   
 
     // Start is called before the first frame update
@@ -24,12 +26,13 @@ public class playerAttack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonUp(0))
+        attackTimer += Time.deltaTime;
+        if (Input.GetMouseButtonUp(0) && attackTimer >= myWeapon.attackCooldown)
         {
-            DoAttack();
             animator.SetTrigger("attackHappens");
+            DoAttack();
             //animator.ResetTrigger("attackHappens");
-            
+
         }
 
         if(Input.GetKey(KeyCode.W))
@@ -62,6 +65,7 @@ public class playerAttack : MonoBehaviour
         {
             if (hit.collider.tag == "enemy")
             {
+           
                 ComplianceMeter measureMtr = hit.collider.GetComponent<ComplianceMeter>();
                 measureMtr.takeDmg(myWeapon.attackDmg);
                 //if enemy health > damage on next hit no momvement else ridgidbody physics 
