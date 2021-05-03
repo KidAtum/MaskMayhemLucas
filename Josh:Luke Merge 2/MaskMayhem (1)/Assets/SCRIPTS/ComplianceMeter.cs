@@ -6,46 +6,54 @@ using UnityEngine.UI;
 
 public class ComplianceMeter : MonoBehaviour
 {
+    //vacine health 
     public float complianceMtr = 100;
-    public float TotalCompliance = 100; 
+    public float TotalCompliance = 100;
 
+    //reference variables 
     public GameObject ComplianceBarUI;
-    public Slider slider; 
+    public Slider slider;
 
 
-void Start ()
+
+    void Start()
     {
         complianceMtr = TotalCompliance;
         slider.value = VacCalc();
-    } 
+    }
 
-void Update()
-    { 
+    void Update()
+    {
         //update health each frame checking for damage
         slider.value = VacCalc();
         if (complianceMtr <= 0)
         {
-            //Destroy(gameObject);
+            //wait clock 
+            //waitTimer(10);
+
+            Destroy(gameObject, 2);
         }
     }
 
-
-public void takeDmg(float amnt)
+    //melee register against health 
+    public void takeDmg(float amnt)
     {
         complianceMtr += -amnt;
         if (complianceMtr <= 0)
         {
+            //debug enemy hit and has no health 
             print("Enemy is complying");
         } else if (complianceMtr > 0)
         {
+            //enemy hit and has health
             print("Enemy is not complying.");
         }
     }
 
     float VacCalc()
     {
-        return complianceMtr / TotalCompliance; 
+        //calculates the vaccine bar 
+        return complianceMtr / TotalCompliance;
     }
-
-
-}
+  
+}//end of file 

@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Start Screen/StartScreen copy.unity
     guid: e87c6dd73a2234c76afee31f9c3cf98a
   - enabled: 1
-    path: Assets/Scenes/green test scene.unity
+    path: Assets/Scenes/test scene.unity
     guid: 099519de11d33445a954e0874181f6ae
   m_configObjects: {}
